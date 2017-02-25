@@ -77,9 +77,9 @@ _________________________________________________________ -->
                     <span class="sr-only">Toggle navigation</span>
                     <i class="fa fa-align-justify"></i>
                 </button>
-                <!--a class="btn btn-default navbar-toggle" href="../../comingsoon.html">
-                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
-                </a-->
+                <a class="btn btn-default navbar-toggle" href="../../basket.html">
+                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs"><div class="simpleCart_quantity"></div> items in cart</span>
+                </a>
             </div>
         </div>
         <!--/.navbar-header -->
@@ -395,6 +395,11 @@ _________________________________________________________ -->
 
         <div class="navbar-buttons">
 
+            <div class="navbar-collapse collapse right" id="basket-overview">
+                <a href="../../basket.html" class="btn btn-primary navbar-btn">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="hidden-sm"><span class="simpleCart_quantity"></span> items in cart</span></a>
+            </div>
             <!--/.nav-collapse -->
 
         </div>
@@ -504,12 +509,14 @@ _________________________________________________________ -->
                             <div >
                                 <img src="changing_madetoorderclothdiapers_img/product1.jpg" alt="" class="img-responsive">
                             </div>
-                            <div class="text">
-                                <h3><a href="changing_madetoorderclothdiapers_detail/product_1.html">Product Name</a></h3>
-                                <p class="price">Php 143.00</p>
+                            <div class="text simpleCart_shelfItem">
+                                <h3 class="item_name">Unicorn Cloth Diaper</h3>
+                                <p align="center">Unicorn Cloth Diaper for baby girls</p>
+                                <p class="price item_price">Php 800.00</p>
                                 <p class="buttons">
+                                    <!--input type="number" value="1" class="item_Quantity form-control" style="width: 50px;"-->
                                     <!--a href="changing_madetoorderclothdiapers_detail/product_1.html" class="btn btn-default">View detail</a-->
-                                    <!--a href="../../basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a-->
+                                    <a class="btn btn-primary item_add" href="javascript:;"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </p>
                             </div>
                         </div>
@@ -520,12 +527,13 @@ _________________________________________________________ -->
                             <div >
                                 <img src="changing_madetoorderclothdiapers_img/product2.jpg" alt="" class="img-responsive">
                             </div>
-                            <div class="text">
-                                <h3><a href="changing_madetoorderclothdiapers_detail/product_2.html">Product Name</a></h3>
-                                <p class="price">Php 143.00</p>
+                            <div class="text simpleCart_shelfItem">
+                                <h3 class="item_name">Caterpillar Cloth Diaper</a></h3>
+                                <p align="center">Caterpillar Cloth Diaper</p>
+                                <p class="price item_price">Php 1,000.00</p>
                                 <p class="buttons">
                                     <!--a href="changing_madetoorderclothdiapers_detail/product_2.html" class="btn btn-default">View detail</a-->
-                                    <!--a href="../../basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a-->
+                                    <a class="btn btn-primary item_add" href="javascript:;"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </p>
                             </div>
                         </div>
@@ -536,12 +544,13 @@ _________________________________________________________ -->
                             <div >
                                 <img src="changing_madetoorderclothdiapers_img/product3.jpg" alt="" class="img-responsive">
                             </div>
-                            <div class="text">
-                                <h3><a href="changing_madetoorderclothdiapers_detail/product_3">Product Name</a></h3>
-                                <p class="price">Php 143.00</p>
+                            <div class="text simpleCart_shelfItem">
+                                <h3 class="item_name">Monsters Inc. Diaper</a></h3>
+                                <p align="center">Monsters Inc. Cloth Diaper - Glow in the Dark</p>
+                                <p class="price item_price">Php 1,000.00</p>
                                 <p class="buttons">
                                     <!--a href="changing_madetoorderclothdiapers_detail/product_3.html" class="btn btn-default">View detail</a-->
-                                    <!--a href="../../basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a-->
+                                    <a class="btn btn-primary item_add" href="javascript:;"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </p>
                             </div>
                         </div>
@@ -766,8 +775,28 @@ _________________________________________________________ -->
 <script src="../../js/owl.carousel.min.js"></script>
 <script src="../../js/front.js"></script>
 
+<script src="../../js/simpleCart.js"></script>
 
+<script type="javascript">
+    simpleCart({
+        checkout: {
+            type: "SendForm" ,
+            url: "https://form.jotform.me/61309338873462"
+        },
+    });
 
+    simpleCart({
+        cartColumns: [
+            { attr: "name" , label: "Name" } ,
+            { attr: "price" , label: "Price", view: 'currency' } ,
+            { view: "decrement" , label: false , text: "-" } ,
+            { attr: "quantity" , label: "Qty" } ,
+            { view: "increment" , label: false , text: "+" } ,
+            { attr: "total" , label: "SubTotal", view: 'currency' } ,
+            { view: "remove" , text: "Remove" , label: false }
+        ]
+    });
+</script>
 
 </body>
 
