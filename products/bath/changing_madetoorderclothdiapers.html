@@ -777,27 +777,6 @@ _________________________________________________________ -->
 
 <script src="../../js/simpleCart.js"></script>
 
-<script type="javascript">
-    simpleCart({
-        checkout: {
-            type: "SendForm" ,
-            url: "https://form.jotform.me/61309338873462"
-        },
-    });
-
-    simpleCart({
-        cartColumns: [
-            { attr: "name" , label: "Name" } ,
-            { attr: "price" , label: "Price", view: 'currency' } ,
-            { view: "decrement" , label: false , text: "-" } ,
-            { attr: "quantity" , label: "Qty" } ,
-            { view: "increment" , label: false , text: "+" } ,
-            { attr: "total" , label: "SubTotal", view: 'currency' } ,
-            { view: "remove" , text: "Remove" , label: false }
-        ]
-    });
-</script>
-
 </body>
 
 </html>

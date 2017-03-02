@@ -96,9 +96,9 @@
 					cartColumns			: [
 						{ attr: "name", label: "Name" },
 						{ attr: "price", label: "Price", view: 'currency' },
-						{ view: "decrement", label: false },
+						//{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Qty" },
-						{ view: "increment", label: false },
+						//{ view: "increment", label: false },
 						{ attr: "total", label: "Sub Total", view: 'currency' },
 						{ view: "remove", text: "Remove", label: false }
 					],
