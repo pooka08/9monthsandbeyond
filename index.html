@@ -80,9 +80,9 @@ _________________________________________________________ -->
                     <span class="sr-only">Toggle navigation</span>
                     <i class="fa fa-align-justify"></i>
                 </button>
-                <!--a class="btn btn-default navbar-toggle" href="comingsoon.html">
-                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
-                </a-->
+                <a class="btn btn-default navbar-toggle" href="basket.html">
+                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs"><div class="simpleCart_quantity"></div> items in cart</span>
+                </a>
             </div>
         </div>
         <!--/.navbar-header -->
@@ -399,6 +399,11 @@ _________________________________________________________ -->
 
         <div class="navbar-buttons">
 
+            <div class="navbar-collapse collapse right" id="basket-overview">
+                <a href="basket.html" class="btn btn-primary navbar-btn">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="hidden-sm"><span class="simpleCart_quantity"></span> items in cart</span></a>
+            </div>
             <!--/.nav-collapse -->
 
         </div>
@@ -745,7 +750,9 @@ _________________________________________________________ -->
                     <ul>
                         <li><a href="aboutus.html">About us</a>
                         </li>
-                        <li><a href="orderform.html">Order Form</a>
+                        <li><a href="brands.html">Brands</a>
+                        </li>
+                        <li><a href="orderform.html">Made To Order Form</a>
                         </li>
                         <li><a href="faq.html">FAQ</a>
                         </li>
@@ -869,6 +876,7 @@ _________________________________________________________ -->
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/front.js"></script>
 
+<script src="js/simpleCart.js"></script>
 
 </body>
 
